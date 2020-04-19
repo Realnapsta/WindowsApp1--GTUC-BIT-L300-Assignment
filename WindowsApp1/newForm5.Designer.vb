@@ -24,10 +24,6 @@ Partial Class newForm5
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(newForm5))
-        Me.Contacts_DBDataSet = New WindowsApp1.Contacts_DBDataSet()
-        Me.Person_TBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Person_TBTableAdapter = New WindowsApp1.Contacts_DBDataSetTableAdapters.Person_TBTableAdapter()
-        Me.TableAdapterManager = New WindowsApp1.Contacts_DBDataSetTableAdapters.TableAdapterManager()
         Me.Person_TBBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -43,6 +39,11 @@ Partial Class newForm5
         Me.Person_TBBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.btnGobackHome = New System.Windows.Forms.ToolStripButton()
         Me.Person_TBDataGridView = New System.Windows.Forms.DataGridView()
+        Me.FillBy_P_IDToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.P_IDToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.P_IDToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.FillBy_P_IDToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,40 +52,18 @@ Partial Class newForm5
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FillBy_P_IDToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.P_IDToolStripLabel = New System.Windows.Forms.ToolStripLabel()
-        Me.P_IDToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.FillBy_P_IDToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        CType(Me.Contacts_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Person_TBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Person_TBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Contacts_DBDataSet = New WindowsApp1.Contacts_DBDataSet()
+        Me.Person_TBTableAdapter = New WindowsApp1.Contacts_DBDataSetTableAdapters.Person_TBTableAdapter()
+        Me.TableAdapterManager = New WindowsApp1.Contacts_DBDataSetTableAdapters.TableAdapterManager()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.Person_TBBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Person_TBBindingNavigator.SuspendLayout()
         CType(Me.Person_TBDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FillBy_P_IDToolStrip.SuspendLayout()
+        CType(Me.Person_TBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Contacts_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Contacts_DBDataSet
-        '
-        Me.Contacts_DBDataSet.DataSetName = "Contacts_DBDataSet"
-        Me.Contacts_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Person_TBBindingSource
-        '
-        Me.Person_TBBindingSource.DataMember = "Person_TB"
-        Me.Person_TBBindingSource.DataSource = Me.Contacts_DBDataSet
-        '
-        'Person_TBTableAdapter
-        '
-        Me.Person_TBTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Call_TBTableAdapter = Nothing
-        Me.TableAdapterManager.Message_TBTableAdapter = Nothing
-        Me.TableAdapterManager.Person_TBTableAdapter = Me.Person_TBTableAdapter
-        Me.TableAdapterManager.UpdateOrder = WindowsApp1.Contacts_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Person_TBBindingNavigator
         '
@@ -101,7 +80,7 @@ Partial Class newForm5
         Me.Person_TBBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Person_TBBindingNavigator.Name = "Person_TBBindingNavigator"
         Me.Person_TBBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Person_TBBindingNavigator.Size = New System.Drawing.Size(1459, 31)
+        Me.Person_TBBindingNavigator.Size = New System.Drawing.Size(1094, 27)
         Me.Person_TBBindingNavigator.TabIndex = 0
         Me.Person_TBBindingNavigator.Text = "BindingNavigator1"
         '
@@ -111,13 +90,13 @@ Partial Class newForm5
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(45, 28)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 24)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
@@ -127,7 +106,7 @@ Partial Class newForm5
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
@@ -136,7 +115,7 @@ Partial Class newForm5
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveFirstItem.Text = "Move first"
         '
         'BindingNavigatorMovePreviousItem
@@ -145,28 +124,27 @@ Partial Class newForm5
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 27)
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(38, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -174,7 +152,7 @@ Partial Class newForm5
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -183,20 +161,20 @@ Partial Class newForm5
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(24, 24)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'Person_TBBindingNavigatorSaveItem
         '
         Me.Person_TBBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.Person_TBBindingNavigatorSaveItem.Image = CType(resources.GetObject("Person_TBBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.Person_TBBindingNavigatorSaveItem.Name = "Person_TBBindingNavigatorSaveItem"
-        Me.Person_TBBindingNavigatorSaveItem.Size = New System.Drawing.Size(29, 28)
+        Me.Person_TBBindingNavigatorSaveItem.Size = New System.Drawing.Size(24, 24)
         Me.Person_TBBindingNavigatorSaveItem.Text = "Save Data"
         '
         'btnGobackHome
@@ -205,7 +183,7 @@ Partial Class newForm5
         Me.btnGobackHome.Image = CType(resources.GetObject("btnGobackHome.Image"), System.Drawing.Image)
         Me.btnGobackHome.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnGobackHome.Name = "btnGobackHome"
-        Me.btnGobackHome.Size = New System.Drawing.Size(54, 28)
+        Me.btnGobackHome.Size = New System.Drawing.Size(44, 24)
         Me.btnGobackHome.Text = "Home"
         '
         'Person_TBDataGridView
@@ -214,12 +192,50 @@ Partial Class newForm5
         Me.Person_TBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Person_TBDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.Person_TBDataGridView.DataSource = Me.Person_TBBindingSource
-        Me.Person_TBDataGridView.Location = New System.Drawing.Point(12, 32)
+        Me.Person_TBDataGridView.Location = New System.Drawing.Point(11, 67)
+        Me.Person_TBDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Person_TBDataGridView.Name = "Person_TBDataGridView"
         Me.Person_TBDataGridView.RowHeadersWidth = 51
         Me.Person_TBDataGridView.RowTemplate.Height = 24
-        Me.Person_TBDataGridView.Size = New System.Drawing.Size(1427, 414)
+        Me.Person_TBDataGridView.Size = New System.Drawing.Size(1070, 336)
         Me.Person_TBDataGridView.TabIndex = 1
+        '
+        'FillBy_P_IDToolStrip
+        '
+        Me.FillBy_P_IDToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.FillBy_P_IDToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.P_IDToolStripLabel, Me.P_IDToolStripTextBox, Me.FillBy_P_IDToolStripButton, Me.ToolStripButton1})
+        Me.FillBy_P_IDToolStrip.Location = New System.Drawing.Point(0, 27)
+        Me.FillBy_P_IDToolStrip.Name = "FillBy_P_IDToolStrip"
+        Me.FillBy_P_IDToolStrip.Size = New System.Drawing.Size(1094, 25)
+        Me.FillBy_P_IDToolStrip.TabIndex = 2
+        Me.FillBy_P_IDToolStrip.Text = "FillBy_P_IDToolStrip"
+        '
+        'P_IDToolStripLabel
+        '
+        Me.P_IDToolStripLabel.Name = "P_IDToolStripLabel"
+        Me.P_IDToolStripLabel.Size = New System.Drawing.Size(109, 22)
+        Me.P_IDToolStripLabel.Text = "Enter ID to Search : "
+        '
+        'P_IDToolStripTextBox
+        '
+        Me.P_IDToolStripTextBox.Name = "P_IDToolStripTextBox"
+        Me.P_IDToolStripTextBox.Size = New System.Drawing.Size(76, 25)
+        '
+        'FillBy_P_IDToolStripButton
+        '
+        Me.FillBy_P_IDToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillBy_P_IDToolStripButton.Name = "FillBy_P_IDToolStripButton"
+        Me.FillBy_P_IDToolStripButton.Size = New System.Drawing.Size(46, 22)
+        Me.FillBy_P_IDToolStripButton.Text = "Search"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(53, 22)
+        Me.ToolStripButton1.Text = "View All"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -286,62 +302,57 @@ Partial Class newForm5
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.Width = 125
         '
-        'FillBy_P_IDToolStrip
+        'Person_TBBindingSource
         '
-        Me.FillBy_P_IDToolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.FillBy_P_IDToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.P_IDToolStripLabel, Me.P_IDToolStripTextBox, Me.FillBy_P_IDToolStripButton, Me.ToolStripButton1})
-        Me.FillBy_P_IDToolStrip.Location = New System.Drawing.Point(0, 31)
-        Me.FillBy_P_IDToolStrip.Name = "FillBy_P_IDToolStrip"
-        Me.FillBy_P_IDToolStrip.Size = New System.Drawing.Size(1459, 31)
-        Me.FillBy_P_IDToolStrip.TabIndex = 2
-        Me.FillBy_P_IDToolStrip.Text = "FillBy_P_IDToolStrip"
+        Me.Person_TBBindingSource.DataMember = "Person_TB"
+        Me.Person_TBBindingSource.DataSource = Me.Contacts_DBDataSet
         '
-        'P_IDToolStripLabel
+        'Contacts_DBDataSet
         '
-        Me.P_IDToolStripLabel.Name = "P_IDToolStripLabel"
-        Me.P_IDToolStripLabel.Size = New System.Drawing.Size(139, 28)
-        Me.P_IDToolStripLabel.Text = "Enter ID to Search : "
+        Me.Contacts_DBDataSet.DataSetName = "Contacts_DBDataSet"
+        Me.Contacts_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'P_IDToolStripTextBox
+        'Person_TBTableAdapter
         '
-        Me.P_IDToolStripTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.P_IDToolStripTextBox.Name = "P_IDToolStripTextBox"
-        Me.P_IDToolStripTextBox.Size = New System.Drawing.Size(100, 31)
+        Me.Person_TBTableAdapter.ClearBeforeFill = True
         '
-        'FillBy_P_IDToolStripButton
+        'TableAdapterManager
         '
-        Me.FillBy_P_IDToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.FillBy_P_IDToolStripButton.Name = "FillBy_P_IDToolStripButton"
-        Me.FillBy_P_IDToolStripButton.Size = New System.Drawing.Size(57, 28)
-        Me.FillBy_P_IDToolStripButton.Text = "Search"
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Call_TBTableAdapter = Nothing
+        Me.TableAdapterManager.Message_TBTableAdapter = Nothing
+        Me.TableAdapterManager.Person_TBTableAdapter = Me.Person_TBTableAdapter
+        Me.TableAdapterManager.UpdateOrder = WindowsApp1.Contacts_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'ToolStripButton1
+        'GroupBox1
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(67, 28)
-        Me.ToolStripButton1.Text = "View All"
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 55)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(1071, 348)
+        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "All Contacts"
         '
         'newForm5
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1459, 466)
+        Me.ClientSize = New System.Drawing.Size(1094, 414)
         Me.Controls.Add(Me.FillBy_P_IDToolStrip)
         Me.Controls.Add(Me.Person_TBDataGridView)
         Me.Controls.Add(Me.Person_TBBindingNavigator)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "newForm5"
         Me.Text = "newForm5"
-        CType(Me.Contacts_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Person_TBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Person_TBBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Person_TBBindingNavigator.ResumeLayout(False)
         Me.Person_TBBindingNavigator.PerformLayout()
         CType(Me.Person_TBDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FillBy_P_IDToolStrip.ResumeLayout(False)
         Me.FillBy_P_IDToolStrip.PerformLayout()
+        CType(Me.Person_TBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Contacts_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -379,4 +390,5 @@ Partial Class newForm5
     Friend WithEvents P_IDToolStripTextBox As ToolStripTextBox
     Friend WithEvents FillBy_P_IDToolStripButton As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

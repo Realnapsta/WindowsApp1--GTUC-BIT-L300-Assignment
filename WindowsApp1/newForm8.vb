@@ -23,8 +23,13 @@
         Dim cell As DataGridViewCell = row.Cells(1)
         Dim Call_ID As String = cell.Value
         ' Display the newForm7 form
-        Dim callForm As New newForm7
+        Dim callForm As New newForm9
         callForm.Tag = Call_ID
         callForm.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Me.Hide()
+        Form1.Show()
     End Sub
 End Class

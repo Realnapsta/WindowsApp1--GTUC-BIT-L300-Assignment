@@ -69,6 +69,7 @@ Partial Class newForm8
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         P_IDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
@@ -116,7 +117,7 @@ Partial Class newForm8
         Me.Person_TBBindingNavigator.BindingSource = Me.Person_TBBindingSource
         Me.Person_TBBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.Person_TBBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
-        Me.Person_TBBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Person_TBBindingNavigatorSaveItem})
+        Me.Person_TBBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Person_TBBindingNavigatorSaveItem, Me.ToolStripButton1})
         Me.Person_TBBindingNavigator.Location = New System.Drawing.Point(0, 0)
         Me.Person_TBBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.Person_TBBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -449,6 +450,15 @@ Partial Class newForm8
         Me.DataGridViewTextBoxColumn4.HeaderText = "M_Content"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(42, 22)
+        Me.ToolStripButton1.Text = "home"
+        '
         'newForm8
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -526,4 +536,5 @@ Partial Class newForm8
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStripButton1 As ToolStripButton
 End Class

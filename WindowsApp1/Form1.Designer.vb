@@ -349,7 +349,7 @@ Partial Class Form1
         Me.btnViewDetails.Name = "btnViewDetails"
         Me.btnViewDetails.Size = New System.Drawing.Size(90, 28)
         Me.btnViewDetails.TabIndex = 17
-        Me.btnViewDetails.Text = "newForm6"
+        Me.btnViewDetails.Text = "newform6"
         Me.btnViewDetails.UseVisualStyleBackColor = True
         '
         'btnViewPersons
@@ -359,7 +359,7 @@ Partial Class Form1
         Me.btnViewPersons.Name = "btnViewPersons"
         Me.btnViewPersons.Size = New System.Drawing.Size(90, 28)
         Me.btnViewPersons.TabIndex = 16
-        Me.btnViewPersons.Text = "newForm5"
+        Me.btnViewPersons.Text = "newform5"
         Me.btnViewPersons.UseVisualStyleBackColor = True
         '
         'btnMessageViewer
@@ -511,7 +511,7 @@ Partial Class Form1
         Me.btnViewMessages.Name = "btnViewMessages"
         Me.btnViewMessages.Size = New System.Drawing.Size(90, 28)
         Me.btnViewMessages.TabIndex = 18
-        Me.btnViewMessages.Text = "newForm8"
+        Me.btnViewMessages.Text = "newform8"
         Me.btnViewMessages.UseVisualStyleBackColor = True
         '
         'Form1
