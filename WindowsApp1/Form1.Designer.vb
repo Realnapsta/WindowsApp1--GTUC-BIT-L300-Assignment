@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,20 +20,26 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtGender = New System.Windows.Forms.ComboBox()
+        Me.txtDateofBirth = New System.Windows.Forms.DateTimePicker()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtSName = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.txtPostCode = New System.Windows.Forms.TextBox()
-        Me.txtAddress3 = New System.Windows.Forms.TextBox()
-        Me.txtAddress2 = New System.Windows.Forms.TextBox()
-        Me.txtAddress1 = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.txtFName = New System.Windows.Forms.TextBox()
         Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -41,6 +47,11 @@ Partial Class Form1
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnAddNew = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnViewDetails = New System.Windows.Forms.Button()
+        Me.btnViewPersons = New System.Windows.Forms.Button()
+        Me.btnMessageViewer = New System.Windows.Forms.Button()
+        Me.btnViewMessage = New System.Windows.Forms.Button()
+        Me.btnViewAll = New System.Windows.Forms.Button()
         Me.btnNavigateLast = New System.Windows.Forms.Button()
         Me.btnNavigateFirst = New System.Windows.Forms.Button()
         Me.btnNavigatePrevious = New System.Windows.Forms.Button()
@@ -53,16 +64,7 @@ Partial Class Form1
         Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtNotes = New System.Windows.Forms.RichTextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.btnViewAll = New System.Windows.Forms.Button()
-        Me.btnViewMessage = New System.Windows.Forms.Button()
-        Me.btnMessageViewer = New System.Windows.Forms.Button()
+        Me.btnViewMessages = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -71,15 +73,14 @@ Partial Class Form1
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.txtGender)
+        Me.GroupBox1.Controls.Add(Me.txtDateofBirth)
+        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.txtSName)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtEmail)
-        Me.GroupBox1.Controls.Add(Me.txtPostCode)
-        Me.GroupBox1.Controls.Add(Me.txtAddress3)
-        Me.GroupBox1.Controls.Add(Me.txtAddress2)
-        Me.GroupBox1.Controls.Add(Me.txtAddress1)
+        Me.GroupBox1.Controls.Add(Me.txtAddress)
         Me.GroupBox1.Controls.Add(Me.txtFName)
         Me.GroupBox1.Controls.Add(Me.txtPhone)
         Me.GroupBox1.Controls.Add(Me.Label8)
@@ -89,92 +90,169 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 37)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 30)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(405, 257)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(326, 224)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Contact"
         '
+        'txtGender
+        '
+        Me.txtGender.FormattingEnabled = True
+        Me.txtGender.Items.AddRange(New Object() {"Male", "Female", "Other"})
+        Me.txtGender.Location = New System.Drawing.Point(87, 63)
+        Me.txtGender.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtGender.Name = "txtGender"
+        Me.txtGender.Size = New System.Drawing.Size(234, 21)
+        Me.txtGender.TabIndex = 27
+        '
+        'txtDateofBirth
+        '
+        Me.txtDateofBirth.Location = New System.Drawing.Point(87, 95)
+        Me.txtDateofBirth.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDateofBirth.Name = "txtDateofBirth"
+        Me.txtDateofBirth.Size = New System.Drawing.Size(234, 20)
+        Me.txtDateofBirth.TabIndex = 26
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(23, 95)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(60, 13)
+        Me.Label12.TabIndex = 25
+        Me.Label12.Text = "DateofBirth"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(28, 40)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(55, 13)
+        Me.Label11.TabIndex = 24
+        Me.Label11.Text = "LastName"
+        '
         'txtSName
         '
-        Me.txtSName.Location = New System.Drawing.Point(259, 21)
+        Me.txtSName.Location = New System.Drawing.Point(87, 40)
+        Me.txtSName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSName.Name = "txtSName"
-        Me.txtSName.Size = New System.Drawing.Size(140, 22)
-        Me.txtSName.TabIndex = 23
+        Me.txtSName.Size = New System.Drawing.Size(234, 20)
+        Me.txtSName.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(51, 128)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(32, 13)
+        Me.Label3.TabIndex = 22
+        Me.Label3.Text = "Email"
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(89, 189)
+        Me.txtEmail.Location = New System.Drawing.Point(87, 128)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(310, 22)
-        Me.txtEmail.TabIndex = 21
+        Me.txtEmail.Size = New System.Drawing.Size(234, 20)
+        Me.txtEmail.TabIndex = 5
         '
-        'txtPostCode
+        'txtAddress
         '
-        Me.txtPostCode.Location = New System.Drawing.Point(89, 133)
-        Me.txtPostCode.Name = "txtPostCode"
-        Me.txtPostCode.Size = New System.Drawing.Size(310, 22)
-        Me.txtPostCode.TabIndex = 19
-        '
-        'txtAddress3
-        '
-        Me.txtAddress3.Location = New System.Drawing.Point(89, 105)
-        Me.txtAddress3.Name = "txtAddress3"
-        Me.txtAddress3.Size = New System.Drawing.Size(310, 22)
-        Me.txtAddress3.TabIndex = 18
-        '
-        'txtAddress2
-        '
-        Me.txtAddress2.Location = New System.Drawing.Point(89, 77)
-        Me.txtAddress2.Name = "txtAddress2"
-        Me.txtAddress2.Size = New System.Drawing.Size(310, 22)
-        Me.txtAddress2.TabIndex = 17
-        '
-        'txtAddress1
-        '
-        Me.txtAddress1.Location = New System.Drawing.Point(89, 49)
-        Me.txtAddress1.Name = "txtAddress1"
-        Me.txtAddress1.Size = New System.Drawing.Size(310, 22)
-        Me.txtAddress1.TabIndex = 16
+        Me.txtAddress.Location = New System.Drawing.Point(87, 190)
+        Me.txtAddress.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(234, 20)
+        Me.txtAddress.TabIndex = 7
         '
         'txtFName
         '
-        Me.txtFName.Location = New System.Drawing.Point(89, 22)
+        Me.txtFName.Location = New System.Drawing.Point(87, 14)
+        Me.txtFName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFName.Name = "txtFName"
-        Me.txtFName.Size = New System.Drawing.Size(146, 22)
-        Me.txtFName.TabIndex = 15
+        Me.txtFName.Size = New System.Drawing.Size(234, 20)
+        Me.txtFName.TabIndex = 1
         '
         'txtPhone
         '
-        Me.txtPhone.Location = New System.Drawing.Point(89, 161)
+        Me.txtPhone.Location = New System.Drawing.Point(87, 158)
+        Me.txtPhone.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(310, 22)
-        Me.txtPhone.TabIndex = 14
+        Me.txtPhone.Size = New System.Drawing.Size(234, 20)
+        Me.txtPhone.TabIndex = 6
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(38, 190)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(45, 13)
+        Me.Label8.TabIndex = 8
+        Me.Label8.Text = "Address"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(206, 298)
+        Me.Label7.Location = New System.Drawing.Point(154, 242)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(0, 17)
+        Me.Label7.Size = New System.Drawing.Size(0, 13)
         Me.Label7.TabIndex = 7
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(38, 58)
+        Me.Label6.Location = New System.Drawing.Point(28, 47)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(0, 17)
+        Me.Label6.Size = New System.Drawing.Size(0, 13)
         Me.Label6.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(5, 158)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 13)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Phone Number"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(28, 227)
+        Me.Label4.Location = New System.Drawing.Point(21, 194)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 17)
+        Me.Label4.Size = New System.Drawing.Size(0, 13)
         Me.Label4.TabIndex = 4
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(40, 66)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(42, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Gender"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(28, 14)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(54, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "FirstName"
         '
         'GroupBox2
         '
@@ -183,27 +261,31 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.btnCommit)
         Me.GroupBox2.Controls.Add(Me.btnUpdate)
         Me.GroupBox2.Controls.Add(Me.btnAddNew)
-        Me.GroupBox2.Location = New System.Drawing.Point(544, 300)
+        Me.GroupBox2.Location = New System.Drawing.Point(408, 272)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(334, 119)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Size = New System.Drawing.Size(250, 97)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Action"
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(224, 53)
+        Me.btnDelete.Location = New System.Drawing.Point(168, 43)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(82, 25)
+        Me.btnDelete.Size = New System.Drawing.Size(62, 20)
         Me.btnDelete.TabIndex = 6
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(133, 80)
+        Me.btnCancel.Location = New System.Drawing.Point(100, 65)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(87, 29)
+        Me.btnCancel.Size = New System.Drawing.Size(65, 24)
         Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -211,33 +293,39 @@ Partial Class Form1
         'btnCommit
         '
         Me.btnCommit.Enabled = False
-        Me.btnCommit.Location = New System.Drawing.Point(224, 21)
+        Me.btnCommit.Location = New System.Drawing.Point(168, 17)
+        Me.btnCommit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCommit.Name = "btnCommit"
-        Me.btnCommit.Size = New System.Drawing.Size(82, 26)
+        Me.btnCommit.Size = New System.Drawing.Size(62, 21)
         Me.btnCommit.TabIndex = 4
         Me.btnCommit.Text = "Commit"
         Me.btnCommit.UseVisualStyleBackColor = True
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(43, 53)
+        Me.btnUpdate.Location = New System.Drawing.Point(32, 43)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(82, 25)
+        Me.btnUpdate.Size = New System.Drawing.Size(62, 20)
         Me.btnUpdate.TabIndex = 3
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'btnAddNew
         '
-        Me.btnAddNew.Location = New System.Drawing.Point(43, 21)
+        Me.btnAddNew.Location = New System.Drawing.Point(32, 17)
+        Me.btnAddNew.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddNew.Name = "btnAddNew"
-        Me.btnAddNew.Size = New System.Drawing.Size(82, 26)
+        Me.btnAddNew.Size = New System.Drawing.Size(62, 21)
         Me.btnAddNew.TabIndex = 2
         Me.btnAddNew.Text = "Add"
         Me.btnAddNew.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.btnViewMessages)
+        Me.GroupBox3.Controls.Add(Me.btnViewDetails)
+        Me.GroupBox3.Controls.Add(Me.btnViewPersons)
         Me.GroupBox3.Controls.Add(Me.btnMessageViewer)
         Me.GroupBox3.Controls.Add(Me.btnViewMessage)
         Me.GroupBox3.Controls.Add(Me.btnViewAll)
@@ -245,45 +333,101 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.btnNavigateFirst)
         Me.GroupBox3.Controls.Add(Me.btnNavigatePrevious)
         Me.GroupBox3.Controls.Add(Me.btnNavigateNext)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 300)
+        Me.GroupBox3.Location = New System.Drawing.Point(9, 272)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(405, 136)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox3.Size = New System.Drawing.Size(304, 143)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Navigation"
         '
+        'btnViewDetails
+        '
+        Me.btnViewDetails.Location = New System.Drawing.Point(104, 93)
+        Me.btnViewDetails.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnViewDetails.Name = "btnViewDetails"
+        Me.btnViewDetails.Size = New System.Drawing.Size(90, 28)
+        Me.btnViewDetails.TabIndex = 17
+        Me.btnViewDetails.Text = "newForm6"
+        Me.btnViewDetails.UseVisualStyleBackColor = True
+        '
+        'btnViewPersons
+        '
+        Me.btnViewPersons.Location = New System.Drawing.Point(7, 93)
+        Me.btnViewPersons.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnViewPersons.Name = "btnViewPersons"
+        Me.btnViewPersons.Size = New System.Drawing.Size(90, 28)
+        Me.btnViewPersons.TabIndex = 16
+        Me.btnViewPersons.Text = "newForm5"
+        Me.btnViewPersons.UseVisualStyleBackColor = True
+        '
+        'btnMessageViewer
+        '
+        Me.btnMessageViewer.Location = New System.Drawing.Point(209, 60)
+        Me.btnMessageViewer.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnMessageViewer.Name = "btnMessageViewer"
+        Me.btnMessageViewer.Size = New System.Drawing.Size(90, 28)
+        Me.btnMessageViewer.TabIndex = 15
+        Me.btnMessageViewer.Text = "View Messages"
+        Me.btnMessageViewer.UseVisualStyleBackColor = True
+        '
+        'btnViewMessage
+        '
+        Me.btnViewMessage.Location = New System.Drawing.Point(112, 60)
+        Me.btnViewMessage.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnViewMessage.Name = "btnViewMessage"
+        Me.btnViewMessage.Size = New System.Drawing.Size(82, 28)
+        Me.btnViewMessage.TabIndex = 14
+        Me.btnViewMessage.Text = "Message list"
+        Me.btnViewMessage.UseVisualStyleBackColor = True
+        '
+        'btnViewAll
+        '
+        Me.btnViewAll.Location = New System.Drawing.Point(7, 60)
+        Me.btnViewAll.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnViewAll.Name = "btnViewAll"
+        Me.btnViewAll.Size = New System.Drawing.Size(90, 28)
+        Me.btnViewAll.TabIndex = 7
+        Me.btnViewAll.Text = "View Contacts"
+        Me.btnViewAll.UseVisualStyleBackColor = True
+        '
         'btnNavigateLast
         '
-        Me.btnNavigateLast.Location = New System.Drawing.Point(304, 40)
+        Me.btnNavigateLast.Location = New System.Drawing.Point(228, 32)
+        Me.btnNavigateLast.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNavigateLast.Name = "btnNavigateLast"
-        Me.btnNavigateLast.Size = New System.Drawing.Size(62, 28)
+        Me.btnNavigateLast.Size = New System.Drawing.Size(46, 23)
         Me.btnNavigateLast.TabIndex = 13
         Me.btnNavigateLast.Text = ">>|"
         Me.btnNavigateLast.UseVisualStyleBackColor = True
         '
         'btnNavigateFirst
         '
-        Me.btnNavigateFirst.Location = New System.Drawing.Point(31, 40)
+        Me.btnNavigateFirst.Location = New System.Drawing.Point(23, 32)
+        Me.btnNavigateFirst.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNavigateFirst.Name = "btnNavigateFirst"
-        Me.btnNavigateFirst.Size = New System.Drawing.Size(62, 28)
+        Me.btnNavigateFirst.Size = New System.Drawing.Size(46, 23)
         Me.btnNavigateFirst.TabIndex = 12
         Me.btnNavigateFirst.Text = "|<<"
         Me.btnNavigateFirst.UseVisualStyleBackColor = True
         '
         'btnNavigatePrevious
         '
-        Me.btnNavigatePrevious.Location = New System.Drawing.Point(116, 40)
+        Me.btnNavigatePrevious.Location = New System.Drawing.Point(87, 32)
+        Me.btnNavigatePrevious.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNavigatePrevious.Name = "btnNavigatePrevious"
-        Me.btnNavigatePrevious.Size = New System.Drawing.Size(62, 28)
+        Me.btnNavigatePrevious.Size = New System.Drawing.Size(46, 23)
         Me.btnNavigatePrevious.TabIndex = 11
         Me.btnNavigatePrevious.Text = "<"
         Me.btnNavigatePrevious.UseVisualStyleBackColor = True
         '
         'btnNavigateNext
         '
-        Me.btnNavigateNext.Location = New System.Drawing.Point(209, 40)
+        Me.btnNavigateNext.Location = New System.Drawing.Point(157, 32)
+        Me.btnNavigateNext.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNavigateNext.Name = "btnNavigateNext"
-        Me.btnNavigateNext.Size = New System.Drawing.Size(62, 28)
+        Me.btnNavigateNext.Size = New System.Drawing.Size(46, 23)
         Me.btnNavigateNext.TabIndex = 10
         Me.btnNavigateNext.Text = ">"
         Me.btnNavigateNext.UseVisualStyleBackColor = True
@@ -291,18 +435,20 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(541, 37)
+        Me.Label9.Location = New System.Drawing.Point(406, 30)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(116, 17)
+        Me.Label9.Size = New System.Drawing.Size(91, 13)
         Me.Label9.TabIndex = 21
         Me.Label9.Text = "Pick to Search ID"
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(663, 34)
+        Me.ComboBox1.Location = New System.Drawing.Point(497, 28)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(215, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(162, 21)
         Me.ComboBox1.TabIndex = 22
         '
         'MenuStrip1
@@ -311,26 +457,27 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ViewToolStripMenuItem, Me.SearchToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(901, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(676, 24)
         Me.MenuStrip1.TabIndex = 24
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'SearchToolStripMenuItem
         '
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(67, 24)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.SearchToolStripMenuItem.Text = "Search"
         '
         'Label10
@@ -340,116 +487,38 @@ Partial Class Form1
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label10.Enabled = False
         Me.Label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Label10.Location = New System.Drawing.Point(696, 77)
+        Me.Label10.Location = New System.Drawing.Point(522, 63)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(40, 19)
+        Me.Label10.Size = New System.Drawing.Size(32, 15)
         Me.Label10.TabIndex = 25
         Me.Label10.Text = "Note"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtNotes
         '
-        Me.txtNotes.Location = New System.Drawing.Point(544, 99)
+        Me.txtNotes.Location = New System.Drawing.Point(408, 80)
+        Me.txtNotes.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNotes.Name = "txtNotes"
-        Me.txtNotes.Size = New System.Drawing.Size(334, 195)
-        Me.txtNotes.TabIndex = 26
+        Me.txtNotes.Size = New System.Drawing.Size(252, 188)
+        Me.txtNotes.TabIndex = 8
         Me.txtNotes.Text = ""
         '
-        'Label1
+        'btnViewMessages
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 25)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Name"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(19, 54)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(60, 17)
-        Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Address"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(23, 222)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(56, 17)
-        Me.Label11.TabIndex = 24
-        Me.Label11.Text = "Gender"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 136)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 17)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Post Code"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(30, 166)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 17)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Phone"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(37, 189)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 17)
-        Me.Label3.TabIndex = 22
-        Me.Label3.Text = "Email"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Male", "Female", "Other"})
-        Me.ComboBox2.Location = New System.Drawing.Point(89, 217)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(310, 24)
-        Me.ComboBox2.TabIndex = 25
-        '
-        'btnViewAll
-        '
-        Me.btnViewAll.Location = New System.Drawing.Point(31, 74)
-        Me.btnViewAll.Name = "btnViewAll"
-        Me.btnViewAll.Size = New System.Drawing.Size(87, 50)
-        Me.btnViewAll.TabIndex = 7
-        Me.btnViewAll.Text = "View Contacts"
-        Me.btnViewAll.UseVisualStyleBackColor = True
-        '
-        'btnViewMessage
-        '
-        Me.btnViewMessage.Location = New System.Drawing.Point(135, 74)
-        Me.btnViewMessage.Name = "btnViewMessage"
-        Me.btnViewMessage.Size = New System.Drawing.Size(109, 50)
-        Me.btnViewMessage.TabIndex = 14
-        Me.btnViewMessage.Text = "Message list"
-        Me.btnViewMessage.UseVisualStyleBackColor = True
-        '
-        'btnMessageViewer
-        '
-        Me.btnMessageViewer.Location = New System.Drawing.Point(279, 74)
-        Me.btnMessageViewer.Name = "btnMessageViewer"
-        Me.btnMessageViewer.Size = New System.Drawing.Size(87, 50)
-        Me.btnMessageViewer.TabIndex = 15
-        Me.btnMessageViewer.Text = "View Messages"
-        Me.btnMessageViewer.UseVisualStyleBackColor = True
+        Me.btnViewMessages.Location = New System.Drawing.Point(209, 92)
+        Me.btnViewMessages.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnViewMessages.Name = "btnViewMessages"
+        Me.btnViewMessages.Size = New System.Drawing.Size(90, 28)
+        Me.btnViewMessages.TabIndex = 18
+        Me.btnViewMessages.Text = "newForm8"
+        Me.btnViewMessages.UseVisualStyleBackColor = True
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(901, 442)
+        Me.ClientSize = New System.Drawing.Size(676, 457)
         Me.Controls.Add(Me.txtNotes)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ComboBox1)
@@ -459,6 +528,7 @@ Partial Class Form1
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.Text = "Contact Application - Home"
         Me.GroupBox1.ResumeLayout(False)
@@ -481,10 +551,8 @@ Partial Class Form1
     Friend WithEvents btnAddNew As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnNavigateNext As Button
-    Friend WithEvents txtPostCode As TextBox
-    Friend WithEvents txtAddress3 As TextBox
-    Friend WithEvents txtAddress2 As TextBox
-    Friend WithEvents txtAddress1 As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtAddress As TextBox
     Friend WithEvents txtFName As TextBox
     Friend WithEvents txtPhone As TextBox
     Friend WithEvents Label7 As Label
@@ -497,13 +565,11 @@ Partial Class Form1
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents txtSName As TextBox
-    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents txtNotes As RichTextBox
     Friend WithEvents btnNavigateFirst As Button
     Friend WithEvents btnNavigatePrevious As Button
     Friend WithEvents btnNavigateLast As Button
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label8 As Label
@@ -513,4 +579,10 @@ Partial Class Form1
     Friend WithEvents btnViewAll As Button
     Friend WithEvents btnViewMessage As Button
     Friend WithEvents btnMessageViewer As Button
+    Friend WithEvents btnViewPersons As Button
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtDateofBirth As DateTimePicker
+    Friend WithEvents txtGender As ComboBox
+    Friend WithEvents btnViewDetails As Button
+    Friend WithEvents btnViewMessages As Button
 End Class

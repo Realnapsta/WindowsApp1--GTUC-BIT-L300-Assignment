@@ -16,16 +16,16 @@ Public Class newForm2
         Try
             con = New SqlConnection(conString)
             con.Open()
-            sql = "select * from AddressBook"
+            sql = "select * from Person_TB"
             da = New SqlDataAdapter(sql, con)
-            da.Fill(ds, “AddressBook")
+            da.Fill(ds, “Person_TB")
             con.Close()
         Catch EXP As Exception
             MessageBox.Show(EXP.ToString)
         End Try
 
-        Me.DataGridView1.DataSource = ds.Tables(“AddressBook")
-        Me.ComboBox1.DataSource = ds.Tables("AddressBook ")
+        Me.DataGridView1.DataSource = ds.Tables(“Person_TB")
+        Me.ComboBox1.DataSource = ds.Tables("Person_TB ")
         Me.ComboBox1.DisplayMember = “Id"
         Form1.btnCommit.Enabled = False
     End Sub

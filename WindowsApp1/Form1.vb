@@ -15,28 +15,28 @@ Public Class Form1
     Private Sub NavigateRecords()
 
 
-        txtFName.Text = ds.Tables("AddressBook").Rows(inc).Item(1)
-        txtSName.Text = ds.Tables("AddressBook").Rows(inc).Item(2)
-        txtAddress1.Text = ds.Tables("AddressBook").Rows(inc).Item(3)
-        txtAddress2.Text = ds.Tables("AddressBook").Rows(inc).Item(4)
-        txtAddress3.Text = ds.Tables("AddressBook").Rows(inc).Item(5)
-        txtPostCode.Text = ds.Tables("AddressBook").Rows(inc).Item(6)
-        txtPhone.Text = ds.Tables("AddressBook").Rows(inc).Item(7)
-        txtEmail.Text = ds.Tables("AddressBook").Rows(inc).Item(8)
-        txtNotes.Text = ds.Tables("AddressBook").Rows(inc).Item(9)
-        maxrows = ds.Tables("Addressbook").Rows.Count
+        txtFName.Text = ds.Tables("Person_TB").Rows(inc).Item(1)
+        txtSName.Text = ds.Tables("Person_TB").Rows(inc).Item(2)
+        txtGender.Text = ds.Tables("Person_TB").Rows(inc).Item(3)
+        txtDateofBirth.Text = ds.Tables("Person_TB").Rows(inc).Item(4)
+        txtEmail.Text = ds.Tables("Person_TB").Rows(inc).Item(5)
+        txtPhone.Text = ds.Tables("Person_TB").Rows(inc).Item(6)
+        txtAddress.Text = ds.Tables("Person_TB").Rows(inc).Item(7)
+        txtNotes.Text = ds.Tables("Person_TB").Rows(inc).Item(8)
+
+        maxrows = ds.Tables("Person_TB").Rows.Count
     End Sub
 
     Public Sub AddRecords()
         Try
 
             dsNewRow.Item("FirstName") = txtFName.Text
-            dsNewRow.Item("Surname") = txtSName.Text
-            dsNewRow.Item("Address1") = txtAddress1.Text
-            dsNewRow.Item("Address2") = txtAddress2.Text
-            dsNewRow.Item("Address3") = txtAddress3.Text
-            dsNewRow.Item("PostCode") = txtPostCode.Text
-            dsNewRow.Item("Phone") = txtPhone.Text
+            dsNewRow.Item("LastName") = txtSName.Text
+            dsNewRow.Item("Address") = txtAddress.Text
+            dsNewRow.Item("Gender") = txtGender.Text
+            dsNewRow.Item("Email") = txtEmail.Text
+            dsNewRow.Item("DateOfBirth") = txtDateofBirth.Text
+            dsNewRow.Item("PhoneNumber") = txtPhone.Text
             dsNewRow.Item("Email") = txtEmail.Text
             dsNewRow.Item("Notes") = txtNotes.Text
 
@@ -50,10 +50,10 @@ Public Class Form1
     Public Sub Clearrecords()
         txtFName.Text = ""
         txtSName.Text = ""
-        txtAddress1.Text = ""
-        txtAddress2.Text = ""
-        txtAddress3.Text = ""
-        txtPostCode.Text = ""
+        txtAddress.Text = ""
+        txtGender.Text = ""
+        txtEmail.Text = ""
+        'txtDateofBirth.Text = ""
         txtPhone.Text = ""
         txtEmail.Text = ""
         txtNotes.Text = ""
@@ -65,10 +65,18 @@ Public Class Form1
 
             con = New SqlClient.SqlConnection(conString)
             con.Open()
-            sql = "select * from AddressBook"
+            sql = "select * from Person_TB"
             da = New SqlClient.SqlDataAdapter(sql, con)
-            da.Fill(ds, “AddressBook")
+            da.Fill(ds, “Person_TB")
             con.Close()
+            txtFName.Text = ds.Tables("Person_TB").Rows(inc).Item(1)
+            txtSName.Text = ds.Tables("Person_TB").Rows(inc).Item(2)
+            txtGender.Text = ds.Tables("Person_TB").Rows(inc).Item(3)
+            txtDateofBirth.Text = ds.Tables("Person_TB").Rows(inc).Item(4)
+            txtEmail.Text = ds.Tables("Person_TB").Rows(inc).Item(5)
+            txtPhone.Text = ds.Tables("Person_TB").Rows(inc).Item(6)
+            txtAddress.Text = ds.Tables("Person_TB").Rows(inc).Item(7)
+            txtNotes.Text = ds.Tables("Person_TB").Rows(inc).Item(8)
         Catch EXP As Exception
             MessageBox.Show(EXP.ToString)
         End Try
@@ -89,10 +97,10 @@ Public Class Form1
     Private Sub btnCommit_Click(sender As Object, e As EventArgs) Handles btnCommit.Click
         Dim cb As New SqlCommandBuilder(da)
         Try
-            dsNewRow = ds.Tables("AddressBook").NewRow()
+            dsNewRow = ds.Tables("Person_TB").NewRow()
             AddRecords()
-            ds.Tables("AddressBook").Rows.Add(dsNewRow)
-            da.Update(ds, "AddressBook")
+            ds.Tables("Person_TB").Rows.Add(dsNewRow)
+            da.Update(ds, "Person_TB")
             MessageBox.Show("New Record added to the Database")
             btnCommit.Enabled = False
             btnAddNew.Enabled = True
@@ -106,16 +114,16 @@ Public Class Form1
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim cb As New SqlCommandBuilder(da)
         Try
-            ds.Tables("AddressBook").Rows(inc).Item(1) = txtFName.Text
-            ds.Tables("AddressBook").Rows(inc).Item(2) = txtSName.Text
-            ds.Tables("AddressBook").Rows(inc).Item(3) = txtAddress1.Text
-            ds.Tables("AddressBook").Rows(inc).Item(4) = txtAddress2.Text
-            ds.Tables("AddressBook").Rows(inc).Item(5) = txtAddress3.Text
-            ds.Tables("AddressBook").Rows(inc).Item(6) = txtPostCode.Text
-            ds.Tables("AddressBook").Rows(inc).Item(7) = txtPhone.Text
-            ds.Tables("AddressBook").Rows(inc).Item(8) = txtEmail.Text
-            ds.Tables("AddressBook").Rows(inc).Item(9) = txtNotes.Text
-            da.Update(ds, "AddressBook")
+            ds.Tables("Person_TB").Rows(inc).Item(1) = txtFName.Text
+            ds.Tables("Person_TB").Rows(inc).Item(2) = txtSName.Text
+            ds.Tables("Person_TB").Rows(inc).Item(3) = txtAddress.Text
+            ds.Tables("Person_TB").Rows(inc).Item(4) = txtGender.Text
+            ds.Tables("Person_TB").Rows(inc).Item(5) = txtEmail.Text
+            ds.Tables("Person_TB").Rows(inc).Item(6) = txtDateofBirth.Text
+            ds.Tables("Person_TB").Rows(inc).Item(7) = txtPhone.Text
+            ds.Tables("Person_TB").Rows(inc).Item(8) = txtEmail.Text
+            ds.Tables("Person_TB").Rows(inc).Item(9) = txtNotes.Text
+            da.Update(ds, "Person_TB")
             MsgBox("Records successfuly saved", MsgBoxStyle.OkOnly, )
         Catch exp As Exception
             MessageBox.Show(exp.ToString)
@@ -130,11 +138,11 @@ Public Class Form1
                 Exit Sub
             Else
                 Dim cb As New SqlCommandBuilder(da)
-                ds.Tables(“AddressBook").Rows(inc).Delete()
+                ds.Tables(“Person_TB").Rows(inc).Delete()
                 maxrows = maxrows - 1
                 inc = 0
                 NavigateRecords()
-                da.Update(ds, “AddressBook")
+                da.Update(ds, “Person_TB")
 
             End If
         Catch exp As Exception
@@ -155,20 +163,20 @@ Public Class Form1
 
             con = New SqlClient.SqlConnection(conString)
             con.Open()
-            sql = "select * from AddressBook"
+            sql = "select * from Person_TB"
             da = New SqlClient.SqlDataAdapter(sql, con)
-            da.Fill(ds, “AddressBook")
+            da.Fill(ds, “Person_TB")
             inc = 1
 
-            txtFName.Text = ds.Tables("AddressBook").Rows(inc).Item(1)
-            txtSName.Text = ds.Tables("AddressBook").Rows(inc).Item(2)
-            txtAddress1.Text = ds.Tables("AddressBook").Rows(inc).Item(3)
-            txtAddress2.Text = ds.Tables("AddressBook").Rows(inc).Item(4)
-            txtAddress3.Text = ds.Tables("AddressBook").Rows(inc).Item(5)
-            txtPostCode.Text = ds.Tables("AddressBook").Rows(inc).Item(6)
-            txtPhone.Text = ds.Tables("AddressBook").Rows(inc).Item(7)
-            txtEmail.Text = ds.Tables("AddressBook").Rows(inc).Item(8)
-            txtNotes.Text = ds.Tables("AddressBook").Rows(inc).Item(9)
+            txtFName.Text = ds.Tables("Person_TB").Rows(inc).Item(1)
+            txtSName.Text = ds.Tables("Person_TB").Rows(inc).Item(2)
+            txtGender.Text = ds.Tables("Person_TB").Rows(inc).Item(3)
+            txtDateofBirth.Text = ds.Tables("Person_TB").Rows(inc).Item(4)
+            txtEmail.Text = ds.Tables("Person_TB").Rows(inc).Item(5)
+            txtPhone.Text = ds.Tables("Person_TB").Rows(inc).Item(6)
+            txtAddress.Text = ds.Tables("Person_TB").Rows(inc).Item(7)
+            txtNotes.Text = ds.Tables("Person_TB").Rows(inc).Item(8)
+
             con.Close()
         Catch EXP As Exception
             MessageBox.Show(EXP.ToString)
@@ -237,5 +245,22 @@ Public Class Form1
     Private Sub btnMessageViewer_Click(sender As Object, e As EventArgs) Handles btnMessageViewer.Click
         Me.Hide()
         newForm4.Show()
+    End Sub
+
+    Private Sub btnViewPersons_Click(sender As Object, e As EventArgs) Handles btnViewPersons.Click
+        Me.Hide()
+        newForm5.Show()
+    End Sub
+
+    Private Sub btnViewDetails_Click(sender As Object, e As EventArgs) Handles btnViewDetails.Click
+        Me.Hide()
+        newForm6.Show()
+    End Sub
+
+
+
+    Private Sub btnViewMessages_Click(sender As Object, e As EventArgs) Handles btnViewMessages.Click
+        Me.Hide()
+        newForm8.Show()
     End Sub
 End Class

@@ -73,6 +73,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contacts_DBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contacts_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts_DBDataSet.vb">
+      <DependentUpon>Contacts_DBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +121,30 @@
     <Compile Include="newForm4.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="newForm5.Designer.vb">
+      <DependentUpon>newForm5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newForm5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newForm6.Designer.vb">
+      <DependentUpon>newForm6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newForm6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newForm7.Designer.vb">
+      <DependentUpon>newForm7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newForm7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newForm8.Designer.vb">
+      <DependentUpon>newForm8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newForm8.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -133,8 +165,31 @@
     <EmbeddedResource Include="newForm4.resx">
       <DependentUpon>newForm4.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="newForm5.resx">
+      <DependentUpon>newForm5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newForm6.resx">
+      <DependentUpon>newForm6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newForm7.resx">
+      <DependentUpon>newForm7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newForm8.resx">
+      <DependentUpon>newForm8.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Contacts_DBDataSet.xsc">
+      <DependentUpon>Contacts_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Contacts_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Contacts_DBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Contacts_DBDataSet.xss">
+      <DependentUpon>Contacts_DBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

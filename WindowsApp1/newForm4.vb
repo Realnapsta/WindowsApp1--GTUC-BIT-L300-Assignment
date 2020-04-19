@@ -21,4 +21,8 @@ Public Class newForm4
         Me.Hide()
         Form1.Show()
     End Sub
+
+    Private Sub newForm4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
